@@ -18,29 +18,29 @@ from datetime import datetime
 import time
 
 
-### Construct date designation component for URL of previous month's contributions
-# Get previous month as int
-prev_mon = int(time.strftime("%m")) - 1
+# ### Construct date designation component for URL of previous month's contributions
+# # Get previous month as int
+# prev_mon = int(time.strftime("%m")) - 1
 
-# Check if prev month is December, set year accordingly as str
-if prev_mon == 12:
-    year = str(int(time.strftime("%Y")) - 1)
-else:
-    year = str(int(time.strftime("%Y")))
+# # Check if prev month is December, set year accordingly as str
+# if prev_mon == 12:
+#     year = str(int(time.strftime("%Y")) - 1)
+# else:
+#     year = str(int(time.strftime("%Y")))
 
 
-# Get prev month text name and set abreviations
-prev_mon_text = calendar.month_name[prev_mon]
-# use two variation of abbreviation
-prev_mon_abbr_1 = prev_mon_text[0:3]
-prev_mon_abbr_2 = prev_mon_text[0:4]
-prev_mon_abbr_1 = prev_mon_abbr_1.lower()
-prev_mon_abbr_2 = prev_mon_abbr_2.lower()
+# # Get prev month text name and set abreviations
+# prev_mon_text = calendar.month_name[prev_mon]
+# # use two variation of abbreviation
+# prev_mon_abbr_1 = prev_mon_text[0:3]
+# prev_mon_abbr_2 = prev_mon_text[0:4]
+# prev_mon_abbr_1 = prev_mon_abbr_1.lower()
+# prev_mon_abbr_2 = prev_mon_abbr_2.lower()
 
 # # initialize parameters
-# url = 'http://www.un.org/en/peacekeeping/contributors/2014/mar14_3.pdf'
-# date = 20140331
-# dateString = '3/31/14'
+url = 'http://www.un.org/en/peacekeeping/contributors/2014/mar14_3.pdf'
+date = 20140331
+dateString = '3/31/14'
 # url = 'http://www.un.org/en/peacekeeping/contributors/2014/apr14_3.pdf'
 # date = 20140430
 # dateString = '4/30/14'
@@ -57,16 +57,16 @@ prev_mon_abbr_2 = prev_mon_abbr_2.lower()
 # date = 20140831
 # dateString = '8/31/14'
 
-### Set URL
-# Check whethere 3 or 4 letter month abbreviation
-url_1 = 'http://www.un.org/en/peacekeeping/contributors/' + year + '/' + prev_mon_abbr_1 + str(year[2:4]) + '_3.pdf'
-url_2 = 'http://www.un.org/en/peacekeeping/contributors/' + year + '/' + prev_mon_abbr_2 + str(year[2:4]) + '_3.pdf'
+# ### Set URL
+# # Check whethere 3 or 4 letter month abbreviation
+# url_1 = 'http://www.un.org/en/peacekeeping/contributors/' + year + '/' + prev_mon_abbr_1 + str(year[2:4]) + '_3.pdf'
+# url_2 = 'http://www.un.org/en/peacekeeping/contributors/' + year + '/' + prev_mon_abbr_2 + str(year[2:4]) + '_3.pdf'
 
-response = requests.get(url_1)
-if response.status_code < 400:
-    url = url_1
-else:
-    url = url_2
+# response = requests.get(url_1)
+# if response.status_code < 400:
+#     url = url_1
+# else:
+#     url = url_2
 
 ### Read PDF
 pdfdata = urllib2.urlopen(url).read()
@@ -78,17 +78,17 @@ root = lxml.etree.fromstring(xmldata)
 print "After converting to xml it has %d bytes" % len(xmldata)
 # print "The first 200 characters are: ", xmldata[:200]
 
-### Parse through data
-## set current date from URL
-# get month number
-m3 = ["jan", "feb", "mar", "apr", "may", "jun", "jul", "aug", "sep", "oct", "nov", "dec"]
-month = m3.index(prev_mon_abbr_1)+1
-# Get last day of month
-day = calendar.monthrange(int(year), month)[1]
-# Get date
-date = datetime(int(year), month, day).strftime('%Y%m%d')
+# ### Parse through data
+# ## set current date from URL
+# # get month number
+# m3 = ["jan", "feb", "mar", "apr", "may", "jun", "jul", "aug", "sep", "oct", "nov", "dec"]
+# month = m3.index(prev_mon_abbr_1)+1
+# # Get last day of month
+# day = calendar.monthrange(int(year), month)[1]
+# # Get date
+# date = datetime(int(year), month, day).strftime('%Y%m%d')
 
-dateString = str(month) + '/' + str(day) + '/' + str(int(year)-2000)
+# dateString = str(month) + '/' + str(day) + '/' + str(int(year)-2000)
 
 # Dictionary of country names to replace to make CSV conversion easier
 tccReplace = {"Moldova, Republic of": "Moldova", "Tanzania, United Republic of": "Tanzania", "Macedonia, FYROM": "Macedonia","The former Yugoslav Republic of Macedoniaao": "Macedonia"}
