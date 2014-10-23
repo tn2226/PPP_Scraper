@@ -12,7 +12,6 @@ import scraperwiki
 import urllib2
 import requests
 import lxml.html, lxml.etree
-# import re
 import calendar
 from datetime import datetime
 import time
@@ -38,12 +37,9 @@ import time
 # prev_mon_abbr_2 = prev_mon_abbr_2.lower()
 
 # # initialize parameters
-url = 'http://www.un.org/en/peacekeeping/contributors/2014/apr14_3.pdf'
-date = 20140430
-dateString = '4/30/14'
-# url = 'http://www.un.org/en/peacekeeping/contributors/2014/may14_3.pdf'
-# date = 20140531
-# dateString = '5/31/14'
+url = 'http://www.un.org/en/peacekeeping/contributors/2014/may14_3.pdf'
+date = 20140531
+dateString = '5/31/14'
 # url = 'http://www.un.org/en/peacekeeping/contributors/2014/jun14_3.pdf'
 # date = 20140630
 # dateString = '6/30/14'
