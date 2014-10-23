@@ -36,13 +36,10 @@ import time
 # prev_mon_abbr_1 = prev_mon_abbr_1.lower()
 # prev_mon_abbr_2 = prev_mon_abbr_2.lower()
 
-# # initialize parameters
-url = 'http://www.un.org/en/peacekeeping/contributors/2014/jul14_3.pdf'
-date = 20140731
-dateString = '7/31/14'
-# url = 'http://www.un.org/en/peacekeeping/contributors/2014/aug14_3.pdf'
-# date = 20140831
-# dateString = '8/31/14'
+# initialize parameters
+url = 'http://www.un.org/en/peacekeeping/contributors/2014/aug14_3.pdf'
+date = 20140831
+dateString = '8/31/14'
 
 # ### Set URL
 # # Check whethere 3 or 4 letter month abbreviation
