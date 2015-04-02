@@ -36,10 +36,6 @@ prev_mon_abbr_2 = prev_mon_text[0:4]
 prev_mon_abbr_1 = prev_mon_abbr_1.lower()
 prev_mon_abbr_2 = prev_mon_abbr_2.lower()
 
-prev_mon_abbr_1 = "dec"
-year = 2014
-print prev_mon_abbr_1
-print year
 ### Set URL
 # Check whethere 3 or 4 letter month abbreviation
 url_1 = 'http://www.un.org/en/peacekeeping/contributors/' + year + '/' + prev_mon_abbr_1 + str(year[2:4]) + '_3.pdf'
@@ -51,6 +47,7 @@ if response.status_code < 400:
 else:
     url = url_2
 print url
+url = "http://www.un.org/en/peacekeeping/contributors/2014/dec14_3.pdf"
 ### Read PDF
 pdfdata = urllib2.urlopen(url).read()
 print "The pdf file has %d bytes" % len(pdfdata)
