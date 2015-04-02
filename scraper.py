@@ -19,7 +19,7 @@ import time
 
 ### Construct date designation component for URL of previous month's contributions
 # Get previous month as int
-prev_mon = int(time.strftime("%m")) - 1
+prev_mon = int(time.strftime("%m")) - 2
 
 # Check if prev month is December, set year accordingly as str
 if prev_mon == 12:
@@ -155,6 +155,7 @@ def parseMissionBlock(rtblocks, data):
     #         ndata = None
         else:
             assert False, xx
+            pass
         if ndata:
             ndata.update(data)
             lndata.append(ndata)
