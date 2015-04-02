@@ -36,8 +36,10 @@ prev_mon_abbr_2 = prev_mon_text[0:4]
 prev_mon_abbr_1 = prev_mon_abbr_1.lower()
 prev_mon_abbr_2 = prev_mon_abbr_2.lower()
 
-prev_mon_abbr_1 = dec
+prev_mon_abbr_1 = "dec"
 year = 2014
+print prev_mon_abbr_1
+print year
 ### Set URL
 # Check whethere 3 or 4 letter month abbreviation
 url_1 = 'http://www.un.org/en/peacekeeping/contributors/' + year + '/' + prev_mon_abbr_1 + str(year[2:4]) + '_3.pdf'
