@@ -19,7 +19,7 @@ import time
 
 ### Construct date designation component for URL of previous month's contributions
 # Get previous month as int
-prev_mon = int(time.strftime("%m")) - 4
+prev_mon = int(time.strftime("%m")) - 1
 
 # Check if prev month is December, set year accordingly as str
 if prev_mon == 12:
@@ -46,9 +46,7 @@ if response.status_code < 400:
     url = url_1
 else:
     url = url_2
-print url
-url = "http://www.un.org/en/peacekeeping/contributors/2014/oct14_3.pdf"
-prev_mon_abbr_1 = "oct"
+
 ### Read PDF
 pdfdata = urllib2.urlopen(url).read()
 print "The pdf file has %d bytes" % len(pdfdata)
