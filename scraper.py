@@ -46,7 +46,7 @@ if response.status_code < 400:
     url = url_1
 else:
     url = url_2
-
+print url
 ### Read PDF
 pdfdata = urllib2.urlopen(url).read()
 print "The pdf file has %d bytes" % len(pdfdata)
