@@ -46,9 +46,9 @@ if response.status_code < 400:
     url = url_1
 else:
     url = url_2
-url="http://www.un.org/en/peacekeeping/contributors/2014/dec14_3.pdf"
-prev_mon_abbr_1 = "dec"
-year = 2014
+url="http://www.un.org/en/peacekeeping/contributors/2015/jan15_3.pdf"
+prev_mon_abbr_1 = "jan"
+year = 2015
 ### Read PDF
 pdfdata = urllib2.urlopen(url).read()
 print "The pdf file has %d bytes" % len(pdfdata)
