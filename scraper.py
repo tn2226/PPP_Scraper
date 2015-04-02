@@ -26,8 +26,7 @@ if prev_mon == 12:
     year = str(int(time.strftime("%Y")) - 1)
 else:
     year = str(int(time.strftime("%Y")))
-print prev_mon
-print year
+
 
 # Get prev month text name and set abreviations
 prev_mon_text = calendar.month_name[prev_mon]
@@ -36,7 +35,9 @@ prev_mon_abbr_1 = prev_mon_text[0:3]
 prev_mon_abbr_2 = prev_mon_text[0:4]
 prev_mon_abbr_1 = prev_mon_abbr_1.lower()
 prev_mon_abbr_2 = prev_mon_abbr_2.lower()
-print prev_mon_abbr_1
+
+prev_mon_abbr_1 = dec
+year = 2014
 ### Set URL
 # Check whethere 3 or 4 letter month abbreviation
 url_1 = 'http://www.un.org/en/peacekeeping/contributors/' + year + '/' + prev_mon_abbr_1 + str(year[2:4]) + '_3.pdf'
