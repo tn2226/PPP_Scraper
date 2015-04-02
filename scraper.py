@@ -48,6 +48,7 @@ else:
     url = url_2
 print url
 url = "http://www.un.org/en/peacekeeping/contributors/2014/dec14_3.pdf"
+prev_mon_abbr_1 = "dec"
 ### Read PDF
 pdfdata = urllib2.urlopen(url).read()
 print "The pdf file has %d bytes" % len(pdfdata)
