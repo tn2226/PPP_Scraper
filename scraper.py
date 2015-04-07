@@ -46,10 +46,7 @@ if response.status_code < 400:
     url = url_1
 else:
     url = url_2
-### Catch up on months missed. Replaces above lines of code. Be sure to delete the next three lines.
-url="http://www.un.org/en/peacekeeping/contributors/2015/feb15_3.pdf"
-prev_mon_abbr_1 = "feb"
-year = 2015
+
 ### Read PDF
 pdfdata = urllib2.urlopen(url).read()
 print "The pdf file has %d bytes" % len(pdfdata)
@@ -157,8 +154,9 @@ def parseMissionBlock(rtblocks, data):
     #         assert data["urlEnd"] in ['jul11_3.pdf', 'dec11_3.pdf', 'jun11_3.pdf', 'oct_3.pdf', 'may12_3.pdf'], (xx, data)
     #         ndata = None
         else:
-            #assert False, xx
-            ndata = None
+            assert False, xx
+            #if the PDF has superflous info get around this error with the below command (e.g. Feb 15)
+            #ndata = None
         if ndata:
             ndata.update(data)
             lndata.append(ndata)
