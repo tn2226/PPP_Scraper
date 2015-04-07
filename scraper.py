@@ -157,8 +157,8 @@ def parseMissionBlock(rtblocks, data):
     #         assert data["urlEnd"] in ['jul11_3.pdf', 'dec11_3.pdf', 'jun11_3.pdf', 'oct_3.pdf', 'may12_3.pdf'], (xx, data)
     #         ndata = None
         else:
-            pass
             assert False, xx
+            pass
         if ndata:
             ndata.update(data)
             lndata.append(ndata)
