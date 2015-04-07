@@ -47,8 +47,8 @@ if response.status_code < 400:
 else:
     url = url_2
 ### Catch up on months missed. Replaces above lines of code. Be sure to delete the next three lines.
-url="http://www.un.org/en/peacekeeping/contributors/2015/jan15_3.pdf"
-prev_mon_abbr_1 = "jan"
+url="http://www.un.org/en/peacekeeping/contributors/2015/feb15_3.pdf"
+prev_mon_abbr_1 = "feb"
 year = 2015
 ### Read PDF
 pdfdata = urllib2.urlopen(url).read()
