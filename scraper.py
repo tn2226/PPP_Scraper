@@ -158,7 +158,7 @@ def parseMissionBlock(rtblocks, data):
     #         ndata = None
         else:
             pass
-            #assert False, xx
+            assert False, xx
         if ndata:
             ndata.update(data)
             lndata.append(ndata)
