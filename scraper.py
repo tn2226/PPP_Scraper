@@ -38,8 +38,8 @@ prev_mon_abbr_2 = prev_mon_abbr_2.lower()
 
 ### Set URL
 # Check whethere 3 or 4 letter month abbreviation
-url_1 = 'http://www.un.org/en/peacekeeping/contributors/' + year + '/' + prev_mon_abbr_1 + str(year[2:4]) + '_5.pdf'
-url_2 = 'http://www.un.org/en/peacekeeping/contributors/' + year + '/' + prev_mon_abbr_2 + str(year[2:4]) + '_5.pdf'
+url_1 = 'http://www.un.org/en/peacekeeping/contributors/' + year + '/' + prev_mon_abbr_1 + str(year[2:4]) + '_3.pdf'
+url_2 = 'http://www.un.org/en/peacekeeping/contributors/' + year + '/' + prev_mon_abbr_2 + str(year[2:4]) + '_3.pdf'
 
 response = requests.get(url_1)
 if response.status_code < 400:
